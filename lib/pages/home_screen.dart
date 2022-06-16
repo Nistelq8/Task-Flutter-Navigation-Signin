@@ -59,6 +59,11 @@ class HomeScreen extends StatelessWidget {
             ),
             onPressed: () {
               // Step 8
+
+              if (passwordController.text == "1234") {
+                context.push("/signedIn", extra: usernameController.text);
+              }
+              ;
             },
             child: const Padding(
               padding: EdgeInsets.all(8.0),
